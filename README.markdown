@@ -8,7 +8,7 @@ You need jQuery to run this plugin. I used jQuery v1.6.4 to develope this plugin
 
 **HOWTO**
 
-Just call autoStorage() on any set of forms (e.g. $('forms').autoStorage();) and the values will be saved in the specified webstorage by submitting the form and reloaded by reloading the page.
+Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and the values will be saved in the specified webstorage by submitting the form and reloaded by reloading the page.
 
 **IMPORTANT**
 
@@ -37,4 +37,6 @@ Just call autoStorage() on any set of forms (e.g. $('forms').autoStorage();) and
 			'exclude' : ['textfield1', 'textfield2]
 		});
 	});
-	
+
+
+:-)
