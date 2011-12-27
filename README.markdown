@@ -38,5 +38,3 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 		});
 	});
 
-
-:-)
