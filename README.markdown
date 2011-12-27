@@ -8,13 +8,13 @@ You need jQuery to run this plugin. I used jQuery v1.6.4 to develope this plugin
 
 **HOWTO**
 
-Just call autoStorage() on any set of forms (e.g. $('forms').autoStorage();) and the values will be saved in the specified webstorage by submitting the form and reloaded by reloading the page.
+Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and the values will be saved in the specified webstorage by submitting the form and reloaded by reloading the page.
 
 **IMPORTANT**
 
 *	Every form needs a unique name.
 
-*	Every element in the form needs a unique name.
+*	Every element in the form needs a unique name (except radiobuttons).
 
 *	For element names containing array-brackets, use indeces. (e.g name[1], name[2] ... multipe fields with the same name will cause overwriting data)
 
