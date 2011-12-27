@@ -1,6 +1,7 @@
 /*!
  * jQuery autoStorage Plugin
  * Examples and documentation at: http://www.phunkei.de
+ * Github: https://github.com/phunkei/autoStorage
  * Copyright (c) 2011 Daniel Miguel Baltes Amado
  * Version: 0.5
  * You are free to use this software for your projects, regardless they are
@@ -9,28 +10,6 @@
  *   an appropriate place (e.g. Imprint of your project's website).
  *
  * I will use the above text as "license" until I have found a more approriate one.
- *
- * REQUIREMENTS:
- * You need jQuery to run this plugin. I used jQuery v1.6.4 to develope this plugin, but older versions may handle it, too.
- * Your browser needs support for webstorage stuff.
- * 
- * HOWTO:
- * Just call autoStorage() on any set of forms (e.g. $('forms').autoStorage();) 
- * and the values will be saved in a Webstorage by submitting the form and reloaded by reloading the page.
- * 
- * IMPORTANT:
- * - Every form needs a unique name.
- * - Every element in the form needs a unique name.
- * - For element names containing array-brackets, use indeces. (e.g name[1], name[2] ... multipe fields with the same name will cause overwriting data)
- *
- * YOU CAN PASS INDIVIDUAL SETTINGS AS KEY / VALUE PAIRS SEPERATED BY COMMA:
- * "storageType" 	: "local"|"session"
- * Define the type of storage. At the moment there is no support for sqlite (As it is absolutely useless due a lack of support by most browsers).
- *
- * "exclude"		: ["element1", "element2" ... ]
- * Pass an array with element names to exclude from storage.
- *
- * More to come ...
  */
 (function( $ ){
 	$.fn.autoStorage = function(settings) {
