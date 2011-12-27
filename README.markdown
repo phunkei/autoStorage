@@ -33,7 +33,7 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 
 	$(document).ready( function() {
 		$('form').autoStorage( {
-			'storageType' : 'localStorage',
-			'exclude' : ['textfield1', 'textfield2]
+			'storageType' : 'local',
+			'exclude' : ['textfield1', 'textfield2']
 		});
 	});
