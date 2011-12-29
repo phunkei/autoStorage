@@ -23,18 +23,18 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 
 **SETTINGS / PARAMETERS**
 
-*	*"storageType" : "local" | "session"*
+*	**"storageType" : "local" | "session"**
 
 	Define the type of storage. At the moment there is no support for sqlite (As it is absolutely useless due a lack of support by most browsers).
-	The default is "local".
+	The default is **"local"**. If you are new to the webstorage feature: "localStorage" keeps the data like forever and "sessionStorage" is a temporary storage, that will be deleted after you quit your browser.
 	
-*	*"exclude" : ["element1", "element2" ... ]*
+*	**"exclude" : ["element1", "element2" ... ]**
 
 	Pass an array with element names to exclude from storage.
 	
-*	*"submit" : true | false*
+*	**"submit" : true | false**
 
-	Defines wether the form will be submitted. Set this to false, for ajax like forms.
+	Defines wether the form will be submitted. Set this to **false**, for ajax like forms.
 
 	
 **EXAMPLE**
