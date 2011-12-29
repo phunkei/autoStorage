@@ -40,11 +40,13 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 **EXAMPLE**
 
 ```javascript
-	$(document).ready( function() {
-		$('form').autoStorage( {
-			'submit' : true,
-			'storageType' : 'local',
-			'exclude' : ['textfield1', 'textfield2']
-		});
+$(document).ready( function() {
+	
+	$('form').autoStorage( {
+		'submit' : true,
+		'storageType' : 'local',
+		'exclude' : ['textfield1', 'textfield2']
 	});
+	
+});
 ```
