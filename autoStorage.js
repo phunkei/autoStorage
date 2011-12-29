@@ -1,7 +1,6 @@
 /*!
  * jQuery autoStorage Plugin
  * Examples and documentation at: http://www.phunkei.de
- * Github: https://github.com/phunkei/autoStorage
  * Copyright (c) 2011 Daniel Miguel Baltes Amado
  * Version: 0.5
  * You are free to use this software for your projects, regardless they are
@@ -16,6 +15,7 @@
 		var settings = settings;
 		var data;
 		var exclude;
+		var submit;
 		
 		$(function() {
 			if(settings['storageType'] == 'local') {
@@ -28,13 +28,22 @@
 				data = localStorage;
 			}
 			exclude = (settings['exclude'] !== undefined) ? settings['exclude'] : new Array();
+			submit = (settings['submit'] !== undefined) ? settings['submit'] : true;
 			loadValues();
 		});
 
 		$(this).children('input[type=submit]').click( function() {
+			return submitForm($(this).parent('form'));
+		});
+		
+		$(this).submit( function() {
+			return submitForm($(this));
+		});
+		
+		function submitForm(form) {
 			console.log('SUBMIT');
-			var formname = $(this).parent('form').attr('name');
-			var nodes = getValues($(this).parent('form'));
+			var formname = $(form).attr('name');
+			var nodes = getValues($(form));
 			
 			var storage_str = localStorage.getItem("autoStorage");
 			if(storage_str !== undefined && storage_str != '' && storage_str != null) {
@@ -45,12 +54,8 @@
 			}
 			storage[formname] = nodes;
 			data.setItem('autoStorage', JSON.stringify(storage));	
-			return false;
-		});
-		
-		$(this).submit( function() {
-			return false;
-		});
+			return submit;
+		}
 
 		function getValues(form) {
 			var fname = $(form).attr('name');

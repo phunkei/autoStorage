@@ -29,10 +29,15 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 
 	Pass an array with element names to exclude from storage.
 	
+*	*"submit" : true | false*
+
+	Defines wether the form will be submitted. Set this to false, for ajax like forms.
+	
 **EXAMPLE**
 
 	$(document).ready( function() {
 		$('form').autoStorage( {
+			'submit' : true,
 			'storageType' : 'local',
 			'exclude' : ['textfield1', 'textfield2']
 		});
