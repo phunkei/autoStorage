@@ -39,6 +39,7 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 	
 **EXAMPLE**
 
+```javascript
 	$(document).ready( function() {
 		$('form').autoStorage( {
 			'submit' : true,
@@ -46,3 +47,4 @@ Just call autoStorage() on any set of forms (e.g. $('form').autoStorage();) and 
 			'exclude' : ['textfield1', 'textfield2']
 		});
 	});
+```
