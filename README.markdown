@@ -1,6 +1,7 @@
 autoStorage
 ===========
 ##A jQuery plugin for automatic webstorage
+[www.phunkei.de](http://www.phunkei.de/)
 
 **REQUIREMENTS**
 
