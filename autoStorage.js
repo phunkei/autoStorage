@@ -3,13 +3,7 @@
  * Examples and documentation at: http://www.phunkei.de
  * Github: https://github.com/phunkei/autoStorage
  * Copyright (c) 2011 Daniel Miguel Baltes Amado
- * Version: 0.5
- * You are free to use this software for your projects, regardless they are
- * free or commercial under the following conditions:
- * - You have to mention the author(s) with name(s) and website(s) OR the website of the project in
- *   an appropriate place (e.g. Imprint of your project's website).
- *
- * I will use the above text as "license" until I have found a more approriate one.
+ * Version: 0.6
  */
 (function( $ ){
 	$.fn.autoStorage = function(settings) {
@@ -30,14 +24,16 @@
 			}
 			exclude = (settings['exclude'] !== undefined) ? settings['exclude'] : new Array();
 			submit = (settings['submit'] !== undefined) ? settings['submit'] : true;
-			loadValues();
+			if(data.getItem('autoStorage') !== undefined) {
+				loadValues();
+			}
 		});
 
-		$(this).children('input[type=submit]').click( function() {
+		this.children('input[type=submit]').click( function() {
 			return submitForm($(this).parent('form'));
 		});
 		
-		$(this).submit( function() {
+		this.submit( function() {
 			return submitForm($(this));
 		});
 		
