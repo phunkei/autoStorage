@@ -2,8 +2,8 @@
  * jQuery autoStorage Plugin
  * Examples and documentation at: http://www.phunkei.de
  * Github: https://github.com/phunkei/autoStorage
- * Copyright (c) 2011 Daniel Miguel Baltes Amado
- * Version: 0.6
+ * Copyright (c) 2011 - 2013 Daniel Miguel Baltes Amado
+ * Version: 0.7
  */
 (function( $ ){
 	$.fn.autoStorage = function(settings) {
