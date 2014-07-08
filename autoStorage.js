@@ -42,7 +42,7 @@
 			var formname = $(form).attr('name');
 			var nodes = getValues($(form));
 			
-			var storage_str = localStorage.getItem("autoStorage");
+			var storage_str = data.getItem("autoStorage");
 			if(storage_str !== undefined && storage_str != '' && storage_str != null) {
 				var storage = jQuery.parseJSON(storage_str);
 			}
