@@ -22,9 +22,7 @@
         "sessionStorage",
         "forms"
     ],
-    "homepage": [
-        "https://github.com/phunkei/autoStorage"
-    ],
+    "homepage": "https://github.com/phunkei/autoStorage",
     "files": [
         "autoStorage.js"
     ]
