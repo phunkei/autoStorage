@@ -1,6 +1,6 @@
 {
     "name": "autoStorage",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "title": "autoStorage",
     "author": {
         "name": "Daniel Miguel Baltes Amado",
@@ -8,12 +8,8 @@
     },
     "licenses": [
         {
-            "type": "MIT",
-            "url": "MIT-LICENSE.txt"
-        },
-        {
-            "type": "GPL",
-            "url": "GPL-LICENSE.txt"
+            "type": "APACHE 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
         }
     ],
     "dependencies": {

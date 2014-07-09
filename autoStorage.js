@@ -3,7 +3,7 @@
  * Examples and documentation at: http://www.phunkei.de
  * Github: https://github.com/phunkei/autoStorage
  * Copyright 2014 Daniel Miguel Baltes Amado, Licensed under the Apache License, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
- * Version: 0.7
+ * Version: 0.8
  */
 (function( $ ){
 	$.fn.autoStorage = function(settings) {
