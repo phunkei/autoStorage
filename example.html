@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>autoStorage Example</title>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="autoStorage.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+	form {
+		display: block;
+		max-width: 400px;
+		margin: 40px auto;
+	}
+</style>
+<body>
+
+	<form name="form1">
+		<h1>autoStorage Example</h1>
+		<div class="form-group">
+			<label for="exampleUsername1">Username</label>
+			<input type="text" name="exampleUsername1" class="form-control" id="exampleUsername1" placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" name="exampleInputEmail1" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" name="exampleCheckbox1"> Check me out
+			</label>
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+
+	<script>
+	$( function() {
+		$('form').autoStorage( {
+			'submit' : true,
+			'storageType' : 'local'
+		});
+	});
+	</script>
+
+</body>
+</html>

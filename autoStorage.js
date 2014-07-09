@@ -2,7 +2,7 @@
  * jQuery autoStorage Plugin
  * Examples and documentation at: http://www.phunkei.de
  * Github: https://github.com/phunkei/autoStorage
- * Copyright (c) 2011 - 2013 Daniel Miguel Baltes Amado
+ * Copyright 2014 Daniel Miguel Baltes Amado, Licensed under the Apache License, Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
  * Version: 0.7
  */
 (function( $ ){
@@ -58,10 +58,10 @@
 			var fname = $(form).attr('name');
 			var nodes = new Object();
 			
-			$(form).find('input[type=text]').each( function () {
+			$(form).find('input[type=text], input[type=email], input[type=search]').each( function () {
 				if(hasValue($(this).attr('name'), exclude)) { return true; }
 				var e = $(this).attr('name');
-				nodes[e] = {'--type': 'text', 'value': $(this).val()};
+				nodes[e] = {'--type': $(this).attr('type'), 'value': $(this).val()};
 			});
 			
 			$(form).find('input[type=checkbox]').each( function () {
@@ -96,7 +96,7 @@
 			jQuery.each(storage, function(formname, form) {
 				jQuery.each(form, function(elementname, element) {
 					var type = element['--type'];
-					if(type == 'text') {
+					if(type == 'text' || type == 'email' || type == 'search') {
 						$('form[name='+formname+']').find('input[name='+escapeName(elementname)+']').val(element['value']);
 					}
 					else if(type == 'checkbox') {
